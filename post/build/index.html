@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>使用hugo搭建静态站点 - 滑稽。</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="antic" />
+  <meta name="description" content="一、安装Hugo Install Hugo on macOS, Windows, Linux, FreeBSD, and on any machine where the Go compiler tool chain can run. Hugo是前Docker职员 Steve Francia 开发的基于golang的开源静态站点生成工具， 官方主页" />
+
+  <meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.32.2" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/build/" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" href="/favicon.ico" />
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+<link href="/dist/even.min.css?v=2.7.0" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+<meta property="og:title" content="使用hugo搭建静态站点" />
+<meta property="og:description" content="一、安装Hugo Install Hugo on macOS, Windows, Linux, FreeBSD, and on any machine where the Go compiler tool chain can run. Hugo是前Docker职员 Steve Francia 开发的基于golang的开源静态站点生成工具， 官方主页" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/build/" />
+
+
+
+<meta property="article:published_time" content="2018-01-06T19:58:40&#43;08:00"/>
+
+<meta property="article:modified_time" content="2018-01-06T19:58:40&#43;08:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="使用hugo搭建静态站点">
+<meta itemprop="description" content="一、安装Hugo Install Hugo on macOS, Windows, Linux, FreeBSD, and on any machine where the Go compiler tool chain can run. Hugo是前Docker职员 Steve Francia 开发的基于golang的开源静态站点生成工具， 官方主页">
+
+
+<meta itemprop="datePublished" content="2018-01-06T19:58:40&#43;08:00" />
+<meta itemprop="dateModified" content="2018-01-06T19:58:40&#43;08:00" />
+<meta itemprop="wordCount" content="738">
+
+
+
+<meta itemprop="keywords" content="hugo," />
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="使用hugo搭建静态站点"/>
+<meta name="twitter:description" content="一、安装Hugo Install Hugo on macOS, Windows, Linux, FreeBSD, and on any machine where the Go compiler tool chain can run. Hugo是前Docker职员 Steve Francia 开发的基于golang的开源静态站点生成工具， 官方主页"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Antic</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Antic</a>
+  <span style="color: #03A9F4">滑稽。</span>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">使用hugo搭建静态站点</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2018-01-06 </span>
+        <div class="post-category">
+            
+              <a href="/categories/hugo/"> hugo </a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#一-安装hugo">一、安装Hugo</a></li>
+<li><a href="#二-生成静态站点">二、生成静态站点</a>
+<ul>
+<li>
+<ul>
+<li><a href="#1-创建站点">1.创建站点</a></li>
+<li><a href="#2-theme选择">2.theme选择</a></li>
+<li><a href="#3-发表文章">3.发表文章</a></li>
+<li><a href="#4-部署到github">4.部署到github</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+    
+    <div class="post-content">
+      
+
+<h1 id="一-安装hugo">一、安装Hugo</h1>
+
+<blockquote>
+<p>Install Hugo on macOS, Windows, Linux, FreeBSD, and on any machine where the Go compiler tool chain can run.<br />
+Hugo是前Docker职员 Steve Francia 开发的基于golang的开源静态站点生成工具，<br />
+官方主页：<a href="https://gohugo.io/。">https://gohugo.io/。</a></p>
+
+<p>安装方式有多种，Mac下可通过brew安装。</p>
+</blockquote>
+
+<pre><code class="language-sh">$ # brew install hugo  
+$ # which hugo
+    /usr/local/bin/hugo
+</code></pre>
+
+<h1 id="二-生成静态站点">二、生成静态站点</h1>
+
+<h3 id="1-创建站点">1.创建站点</h3>
+
+<pre><code class="language-sh">$ # hugo new site blog
+   Congratulations! Your new Hugo site is created in ...
+$ # tree
+ .
+ └── blog
+     ├── archetypes  //存放default.md，头文件格式
+     ├── config.toml //配置文件
+     ├── content  //博客文章
+     ├── data   //自定义模版等
+     ├── layouts  //模板文件
+     └── static   //静态资源
+</code></pre>
+
+<p>启动站点：</p>
+
+<pre><code class="language-sh">$ # hugo server
+                   | EN  
++------------------+----+
+  Pages            |  8  
+  Paginator pages  |  0  
+  Non-page files   |  0  
+  Static files     | 23  
+  Processed images |  0  
+  Aliases          |  1  
+  Sitemaps         |  1  
+  Cleaned          |  0  
+  Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
+  Press Ctrl+C to stop
+</code></pre>
+
+<p>这样，一个站点就建好了，本地直接访问<a href="http://localhost:1313。">http://localhost:1313。</a></p>
+
+<h3 id="2-theme选择">2.theme选择</h3>
+
+<p>Hugo官方主题：<a href="https://themes.gohugo.io/。">https://themes.gohugo.io/。</a><br />
+ 选好主题后从gitHub下载下来，将解压出的文件放到themes文件夹下。<br />
+ 这里，本站的选择是<a href="https://github.com/olOwOlo/hugo-theme-even/blob/master/README-zh.md">hugo-theme-even</a>主题。<br />
+ Installation</p>
+
+<pre><code class="language-sh">git clone https://github.com/olOwOlo/hugo-theme-even themes/even
+</code></pre>
+
+<p>Configuration<br />
+将 <code>exampleSite</code>目录下的 <code>config.toml</code> 文件复制到你的站点目录，根据需求进行更改即可。</p>
+
+<h3 id="3-发表文章">3.发表文章</h3>
+
+<p>博客默认没有文章，可使用`<code>hugo new</code>来生成。</p>
+
+<pre><code class="language-sh">$ # hugo new post/about.md
+...post/about.md created
+</code></pre>
+
+<p>使用markdown编辑器打开文件 post/about.md编辑</p>
+
+<pre><code>title: &quot;about&quot;
+date: 2018-01-06T19:58:40+08:00
+Tags: [&quot;about&quot;] //标签
+Categories : [&quot;about&quot;] //分类
+...
+...这里是正文
+...
+
+</code></pre>
+
+<h3 id="4-部署到github">4.部署到github</h3>
+
+<p>先在GitHub上创建一个由你昵称命名的<code>Repository</code>拉到本地，然后pubilc目录里所有文件 <code>push</code>到刚建的那个<code>Repository</code>的<code>master</code>分支。</p>
+
+<p>附：
+绑定自己域名：<br />
+在自己的域名解析页面添加一条<br />
+CNAME记录类型：绑定Github提供的二级域名。<br />
+然后在<code>Repository</code>的setting里面绑定Custom domain即可。</p>
+
+    </div>
+
+    
+    
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">antic</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">2018-01-06</span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">许可协议</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          
+          <a href="/tags/hugo/">hugo</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+        
+          <a class="next" href="/post/about/">
+            <span class="next-text nav-default">About</span>
+            <span class="prev-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  
+
+  
+
+  
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:antic.zhu@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/Imantic" class="iconfont icon-github" title="github"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    
+      2017 - 
+    2018
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">antic</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
+<script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+<script type="text/javascript" src="/dist/even.min.js?v=2.7.0"></script>
+
+
+
+
+</body>
+</html>
