@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on 滑稽。</title>
+    <link>http://localhost:1313/categories/</link>
+    <description>Recent content in Categories on 滑稽。</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	<atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hugo</title>
+      <link>http://localhost:1313/categories/hugo/</link>
+      <pubDate>Sat, 06 Jan 2018 19:58:40 +0800</pubDate>
+      
+      <guid>http://localhost:1313/categories/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Shadowsocks</title>
+      <link>http://localhost:1313/categories/shadowsocks/</link>
+      <pubDate>Sat, 06 Jan 2018 17:58:40 +0800</pubDate>
+      
+      <guid>http://localhost:1313/categories/shadowsocks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>工具</title>
+      <link>http://localhost:1313/categories/%E5%B7%A5%E5%85%B7/</link>
+      <pubDate>Sat, 06 Jan 2018 17:58:40 +0800</pubDate>
+      
+      <guid>http://localhost:1313/categories/%E5%B7%A5%E5%85%B7/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

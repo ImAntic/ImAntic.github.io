@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>工具 on 滑稽。</title>
+    <link>http://localhost:1313/categories/%E5%B7%A5%E5%85%B7/</link>
+    <description>Recent content in 工具 on 滑稽。</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 06 Jan 2018 17:58:40 +0800</lastBuildDate>
+    
+	<atom:link href="http://localhost:1313/categories/%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>自己搭梯子科学上网-shadowsocks</title>
+      <link>http://localhost:1313/post/shadowsocks/</link>
+      <pubDate>Sat, 06 Jan 2018 17:58:40 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/shadowsocks/</guid>
+      <description>基于 阿里云香港服务器 系统 centos7.3 1. 使用repo安装shadowsocks-libev wget https://copr.fedorainfracloud.org/coprs/librehat/shadowsocks/repo/epel-7/librehat-shadowsocks-epel-7.repo mv librehat-shadowsocks-epel-7.repo /etc/yum.repos.d/ yum install epel-release -y yum install gcc gettext autoconf libtool automake make pcre-devel asciidoc xmlto c-ares-devel libev-devel libsodium-devel mbedtls-devel -y yum install shadowsocks-libev ２．配</description>
+    </item>
+    
+  </channel>
+</rss>
