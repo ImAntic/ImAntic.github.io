@@ -17,7 +17,8 @@
 
 
 <meta name="author" content="antic" />
-  <meta name="description" content="基于 阿里云香港服务器 系统 centos7.3 1. 使用repo安装shadowsocks-libev wget https://copr.fedorainfracloud.org/coprs/librehat/shadowsocks/repo/epel-7/librehat-shadowsocks-epel-7.repo mv librehat-shadowsocks-epel-7.repo /etc/yum.repos.d/ yum install epel-release -y yum install gcc gettext autoconf libtool automake make pcre-devel asciidoc xmlto c-ares-devel libev-devel libsodium-devel mbedtls-devel -y yum install shadowsocks-libev ２．配" />
+  <meta name="description" content="基阿里云香港服务器安装shadowsocks-libev 
+" />
 
   <meta name="keywords" content="Hugo, theme, even" />
 
@@ -48,7 +49,9 @@
 <link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
 
 <meta property="og:title" content="自己搭梯子科学上网-shadowsocks" />
-<meta property="og:description" content="基于 阿里云香港服务器 系统 centos7.3 1. 使用repo安装shadowsocks-libev wget https://copr.fedorainfracloud.org/coprs/librehat/shadowsocks/repo/epel-7/librehat-shadowsocks-epel-7.repo mv librehat-shadowsocks-epel-7.repo /etc/yum.repos.d/ yum install epel-release -y yum install gcc gettext autoconf libtool automake make pcre-devel asciidoc xmlto c-ares-devel libev-devel libsodium-devel mbedtls-devel -y yum install shadowsocks-libev ２．配" />
+<meta property="og:description" content="基阿里云香港服务器安装shadowsocks-libev
+
+" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://localhost:1313/post/shadowsocks/" />
 
@@ -69,18 +72,22 @@
 
 
 <meta itemprop="name" content="自己搭梯子科学上网-shadowsocks">
-<meta itemprop="description" content="基于 阿里云香港服务器 系统 centos7.3 1. 使用repo安装shadowsocks-libev wget https://copr.fedorainfracloud.org/coprs/librehat/shadowsocks/repo/epel-7/librehat-shadowsocks-epel-7.repo mv librehat-shadowsocks-epel-7.repo /etc/yum.repos.d/ yum install epel-release -y yum install gcc gettext autoconf libtool automake make pcre-devel asciidoc xmlto c-ares-devel libev-devel libsodium-devel mbedtls-devel -y yum install shadowsocks-libev ２．配">
+<meta itemprop="description" content="基阿里云香港服务器安装shadowsocks-libev
+
+">
 
 
 <meta itemprop="datePublished" content="2018-01-06T17:58:40&#43;08:00" />
 <meta itemprop="dateModified" content="2018-01-06T17:58:40&#43;08:00" />
-<meta itemprop="wordCount" content="237">
+<meta itemprop="wordCount" content="260">
 
 
 
 <meta itemprop="keywords" content="shadowsocks," />
 <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="自己搭梯子科学上网-shadowsocks"/>
-<meta name="twitter:description" content="基于 阿里云香港服务器 系统 centos7.3 1. 使用repo安装shadowsocks-libev wget https://copr.fedorainfracloud.org/coprs/librehat/shadowsocks/repo/epel-7/librehat-shadowsocks-epel-7.repo mv librehat-shadowsocks-epel-7.repo /etc/yum.repos.d/ yum install epel-release -y yum install gcc gettext autoconf libtool automake make pcre-devel asciidoc xmlto c-ares-devel libev-devel libsodium-devel mbedtls-devel -y yum install shadowsocks-libev ２．配"/>
+<meta name="twitter:description" content="基阿里云香港服务器安装shadowsocks-libev
+
+"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -172,7 +179,14 @@
 <ul>
 <li>
 <ul>
-<li><a href="#基于">基于</a></li>
+<li><a href="#基阿里云香港服务器安装shadowsocks-libev">基阿里云香港服务器安装shadowsocks-libev</a>
+<ul>
+<li><a href="#1-使用repo安装shadowsocks-libev">1.使用repo安装shadowsocks-libev</a></li>
+<li><a href="#2-配置文件">2.配置文件</a></li>
+<li><a href="#3-启动">3.启动</a></li>
+<li><a href="#4-开放端口">4.开放端口</a></li>
+<li><a href="#5-相关">5.相关</a></li>
+</ul></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -182,27 +196,26 @@
 
     
     <div class="post-content">
-      
+      <h3 id="基阿里云香港服务器安装shadowsocks-libev">基阿里云香港服务器安装shadowsocks-libev</h3>
 
-<h3 id="基于">基于</h3>
+<p></p>
 
-<p>阿里云香港服务器<br />
-系统 centos7.3
-<!-- more -->
-1. 使用repo安装shadowsocks-libev</p>
+<p>系统 centos7.3</p>
 
-<pre><code> wget https://copr.fedorainfracloud.org/coprs/librehat/shadowsocks/repo/epel-7/librehat-shadowsocks-epel-7.repo
+<h4 id="1-使用repo安装shadowsocks-libev">1.使用repo安装shadowsocks-libev</h4>
+
+<pre><code class="language-sh"> wget https://copr.fedorainfracloud.org/coprs/librehat/shadowsocks/repo/epel-7/librehat-shadowsocks-epel-7.repo
 mv librehat-shadowsocks-epel-7.repo /etc/yum.repos.d/
 </code></pre>
 
-<pre><code>yum install epel-release -y   
+<pre><code class="language-sh">yum install epel-release -y   
 yum install gcc gettext autoconf libtool automake make pcre-devel asciidoc xmlto c-ares-devel libev-devel libsodium-devel mbedtls-devel -y    
 yum install shadowsocks-libev
 </code></pre>
 
-<p>２．配置文件</p>
+<h4 id="2-配置文件">2.配置文件</h4>
 
-<pre><code>vim /etc/shadowsocks-libev/config.json
+<pre><code class="language-sh">vim /etc/shadowsocks-libev/config.json
 </code></pre>
 
 <pre><code>{
@@ -215,32 +228,37 @@ yum install shadowsocks-libev
 }
 </code></pre>
 
-<pre><code class="language-注意：```">server是服务器IP，默认127.0.0.1 , 只监听本地，不允许远程连接，设置为0.0.0.0时监听全部IP。server_port为服务器监听的端口。
+<p>注意：</p>
 
+<p>server是服务器IP，默认127.0.0.1 , 只监听本地，不允许远程连接，设置为0.0.0.0时监听全部IP。server_port为服务器监听的端口。</p>
 
-3.启动       
+<h4 id="3-启动">3.启动</h4>
+
+<pre><code class="language-sh">systemctl enable shadowsocks-libev.service
+systemctl start shadowsocks-libev.service
 </code></pre>
 
-<p>systemctl enable shadowsocks-libev.service
-systemctl start shadowsocks-libev.service</p>
+<p>查看运行状态</p>
 
-<pre><code>查看运行状态  
+<pre><code class="language-sh"> status shadowsocks-libev -l
 </code></pre>
 
-<p>status shadowsocks-libev -l</p>
+<h4 id="4-开放端口">4.开放端口</h4>
 
-<pre><code>4.开放端口  
-* firewall
-</code></pre>
+<ul>
+<li>firewall<br />
+<code>sh
+systemctl start firewalld  
+firewall-cmd --permanent --add-port=6666/tcp  
+firewall-cmd --reload  
+</code></li>
+</ul>
 
-<p>systemctl start firewalld
-firewall-cmd &ndash;permanent &ndash;add-port=6666/tcp
-firewall-cmd &ndash;reload<br />
-```</p>
+<h4 id="5-相关">5.相关</h4>
 
-<p>5.相关<br />
-* <a href="https://github.com/shadowsocks/shadowsocks-libev">https://github.com/shadowsocks/shadowsocks-libev</a></p>
-
+<ul>
+<li><a href="https://github.com/shadowsocks/shadowsocks-libev">https://github.com/shadowsocks/shadowsocks-libev</a></li>
+</ul>
     </div>
 
     
